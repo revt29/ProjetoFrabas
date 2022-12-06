@@ -1,0 +1,509 @@
+*{
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.hover {
+    position: relative;
+    color: #63819e;
+    transition: ease-in-out 0.1s;
+}
+
+.hover:hover {
+    color: #ffffff;
+}
+
+/* login */
+
+.bg {
+    background-image: url(../imagens/fundo.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.login-area {
+    margin-top: 150px;
+}
+
+#btn{
+    --bs-btn-color: #004588;
+    --bs-btn-border-color: #004588;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #004588;
+    --bs-btn-hover-border-color: #004588;
+    --bs-btn-focus-shadow-rgb: 13, 110, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #004588;
+    --bs-btn-active-border-color: #004588;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #004588;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #004588;
+    --bs-gradient: none;
+}
+
+/* inicial */
+
+header {
+    color: white;
+    font-family: 'IBM Plex Sans', sans-serif;
+    border-bottom: 7px solid #efb810;
+    background-color: #004588;
+    display: block;
+    
+}
+
+
+article {
+ font-family: 'IBM Plex Sans', sans-serif;
+
+
+}
+
+footer {
+    position: relative;
+    padding: 10px 0;
+    width: 100%;
+    background-color:  #004588 ;
+    border-top: 5px solid #efb810;
+    z-index: 9;
+    color: white;
+    font-family: 'IBM Plex Sans', sans-serif;
+    display: block;
+
+}
+
+/* O que é o FRABAS? */
+
+#explicacao {
+    background-color: #004588;
+    border-top: 7px solid #efb810;
+}
+
+.imt {
+    background-image: url(../imagens/imt.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: left;
+    min-height: 550px;
+}
+
+@media (max-width: 768px) {
+    .imt {
+        border-top: 4px solid #002b57;
+    }
+}
+
+@media (min-width: 768px) {
+    .imt {
+        border-left: 4px solid #002b57;
+    }
+}
+
+/* Agilize seu dia com o Frabas! */
+
+#agilize {
+    background-color: #004588;
+    border-top: 7px solid #efb810;
+}
+
+.estudante {
+    background-image: url(../imagens/estudante.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-origin: padding-box;
+    min-height: 550px;
+}
+
+@media (max-width: 768px) {
+    .estudante {
+        border-bottom: 4px solid #002b57;
+    }
+}
+
+@media (min-width: 768px) {
+    .estudante {
+        border-right: 4px solid #002b57;
+    }
+}
+
+
+/* Reestilização da logo */
+
+img#logo{
+    display: none;
+}
+
+img#logo_reduced{
+    display: block;
+}
+
+@media (min-width: 992px) {
+   img#logo {
+      display: block;
+    }
+    img#logo_reduced {
+        display: none;
+    }
+
+}
+
+/* Reestilização do ícone usuário */
+
+div#usuario_texto{
+    display: block;
+}
+
+img#usuario_imagem{
+    display: none;
+}
+
+h6.dropdown-header{
+    display:none;
+}
+
+hr.dropdown-divider#divisor_delete{
+    display:none;
+}
+
+
+@media (min-width: 992px) {
+    div#usuario_texto{
+      display: none;
+    }
+    img#usuario_imagem{
+        display: block;
+    }
+    h6.dropdown-header{
+        display:block;
+    }
+    hr.dropdown-divider#divisor_delete{
+        display:block;
+    }
+}
+
+/* Reestilização do ícone de carrinho */
+
+div#carrinho_texto{
+    display: block;
+}
+
+img#carrinho_imagem{
+    display: none;
+}
+
+@media (min-width: 992px) {
+    div#carrinho_texto{
+      display: none;
+    }
+    img#carrinho_imagem{
+        display: block;
+    }
+    h6.dropdown-header{
+        display:block;
+    }
+    hr.dropdown-divider#divisor_delete{
+        display:block;
+    }
+}
+
+/* botão hambúrguer */
+
+.navbar-toggler-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e ");
+}
+.navbar-toggler {
+    color: white;
+    border: 1px solid white ;
+}
+
+/* estilização de botões das lanchonetes */
+
+ .lanchonete {
+    border-radius: 10px;
+    max-height: 380px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+
+ .hovtxt {
+    border-radius: 10px;
+    max-height: 380px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+
+/* transição imagem para texto on hover */
+    opacity: 0;
+    background: rgb(0, 69, 136, 0);
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+ }
+
+ .hovtxt:hover {
+    opacity: 1;
+    background: rgb(0, 69, 136, 0.7);
+ }
+
+/* fale conosco */
+/* remoção de underline em elementos "a" */
+
+ a{
+    text-decoration: none;
+ }
+
+ .form-control {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border-color: #002b57;
+    transition: ease-in-out 0.2s;
+ }
+
+ .form-control:focus {
+    color: #292121;
+    background-color: #fff;
+    border-color: #002b57;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(0, 69, 136, 0.25);
+    transition: ease-in-out 0.2s;
+ }
+ 
+ .form-control.erro {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border-width: 2px;
+    border-color: #e20000;
+    transition: ease-in-out 0.2s;
+ }
+
+ .erro:focus {
+    color: #460e0e;
+    background-color: #fff;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(231, 0, 0, 0.25);
+ }
+
+ .form-control.sucesso {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border-width: 2px;
+    border-color: #00e231;
+    transition: ease-in-out 0.2s;
+ }
+
+ .sucesso:focus {
+    color: #0e460e;
+    background-color: #fff;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(0, 231, 19, 0.25);
+ }
+
+ .celular {
+    display: none;
+    background-image: url(../imagens/falando_celular.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    border-left: 4px solid #002b57;
+}
+
+@media (min-width: 992px) {
+    .celular {
+        display: block;
+    }
+}
+
+#enviar_msg{
+    margin-left: 11px;
+    --bs-btn-color: #004588;
+    --bs-btn-border-color: #004588;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #004588;
+    --bs-btn-hover-border-color: #004588;
+    --bs-btn-focus-shadow-rgb: 13, 110, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #004588;
+    --bs-btn-active-border-color: ##004588;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #004588;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #004588;
+    --bs-gradient: none;
+}
+
+/* catalogo C.A. */
+.fundo_ca {
+    background-image: url(../imagens/fundo_ca.jpg);
+    background-size:2500px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: -250px;
+    height: 400px;
+    width: 3000px
+}
+
+#titulo_ca {
+    text-align: center;
+}
+
+.ampliado {
+    display: none;
+}
+
+.reduzido {
+    display: block;
+}
+
+@media (min-width: 992px) {
+    .ampliado {
+        display: block;
+    }
+    .reduzido {
+        display: none;
+    }
+}
+
+/* produtos */
+
+#addCartButton {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #004588;
+    --bs-btn-border-color: #004588;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #145da5;
+    --bs-btn-hover-border-color: #004588;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #004588;
+    --bs-btn-active-border-color: #004588;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #004588;
+    --bs-btn-disabled-border-color: #004588;
+  }
+
+  #addFavButton {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #004588;
+    --bs-btn-border-color: #004588;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #145da5;
+    --bs-btn-hover-border-color: #004588;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #004588;
+    --bs-btn-active-border-color: #004588;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #004588;
+    --bs-btn-disabled-border-color: #004588;
+  }
+
+
+#icon_cart {
+    display: block;
+    margin-left: 10px;
+}
+
+#add_cart_text {
+    display: none;
+}
+
+
+@media (min-width: 1200px) {
+    #add_cart_text {
+        display: block;
+    }
+}
+
+@media (min-width: 1200px) {
+    #icon_cart {
+        display: none;
+    }
+}
+
+#produtoTipo {
+    display: none;
+}
+
+/* carrinho */
+
+#produtoCart {
+    border-bottom: rgb(0, 0, 0, 0.2) solid 2px;
+}
+
+#addQTYButton {
+    color: black;
+    background-color: lightgray;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 7px; 
+    padding-top: 3px;
+    max-width: 55px;
+    min-width: 55px;
+    transition: ease-in-out 0.1s;
+}
+
+#addQTYButton:hover {
+    color: white;
+    background-color: #004588;
+
+}
+
+#removeQTYButton {
+    color: black;
+    background-color: lightgray;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 7px; 
+    padding-top: 3px;
+    max-width: 55px;
+    min-width: 55px;
+    transition: ease-in-out 0.1s;
+}
+
+#removeQTYButton:hover {
+    color: white;
+    background-color: #004588;
+}
+
+@media (max-width: 1050px) {
+    #ProdutoCartNome {
+        display: none;
+    }
+}
+
+/* tela de pagamento */
+
+#containerCard {
+    padding: 15px;
+    background-color: rgb(255, 81, 0);
+    color: white;
+    transition: ease-in-out 0.2s;
+}
+
+#containerCard:hover {
+    padding: 30px;
+}
+
+#containerSelCard {
+    padding: 15px;
+    background-color: rgb(255, 81, 0);
+    color: white;
+    transition: ease-in-out 0.2s;
+}
+
+#containerSelCard:hover {
+    padding: 30px;
+}
+
+#removeText {
+    display: block;
+}

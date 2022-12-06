@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frabas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap" rel="stylesheet">
+    <style>
+      body{
+        overflow: hidden;
+      }
+    </style>
+</head>
+<body class="bg">
+    <html>
+        <article class="login-area">
+                <div class="container-fluid d-flex justify-content-center text-center">
+                    <div class="col-6 col-xxl-6 col-lg-6 col-md-6 col-sm-6 rounded shadow-lg pt-5" style="background-color: #004588; height: 600px;max-width: 600px; min-width: 450px; border: 3px solid rgb(0, 69, 136, 0.25);">
+                        <img src="imagens/logo frabas.png" class="" width="300" alt="Frabas">
+                        <div class="text-white mt-5 fs-5 mb-3">Faça seu login</div>
+                        <div class="px-5" style="background-color: white; border-top: solid 5px #efb810;" id="forms">
+                            <!-- Email -->
+                            <div class="input-group col-12">
+                                <label for="InputEmail" class="form-label col-12 text-start mt-3">
+                                  Seu email
+                                </label>
+                                <input type="text" class="form-control rounded" placeholder="12.34567.8@maua.br" aria-label="Seu email" id="email">
+                            </div>
+                            <p class="text-start mt-1" style="font-size: 12px; color: red; opacity: 0;" id="erro_email">
+                              *Email não preenchido
+                            </p>
+                            <!-- Senha -->
+                          <div class="input-group col-12">
+                              <label for="InputSenha" class="form-label col-12 text-start">Sua senha</label>
+                              <input type="password" class="form-control rounded-start" placeholder="coxinha, data de nascimento..." aria-label="Sua senha" id="senha">
+                              <div type="button" class="rounded-end" onclick="mostrarSenha()" style="border: #002b57 solid 1px; background-color: #004588;" >
+                                <img src="imagens/icon_visible.png" class="mx-1 pt-1" alt="Senha visível" width="30" style="display: none;" id="visivel">
+                                <img src="imagens/icon_invisible.png" class="mx-1 pt-1" style="display: block;" alt="Senha invisível" width="30" id="invisivel">
+                              </div>
+                          </div>
+                          <p class="text-start mt-1" style="font-size: 12px; color: red; opacity: 0;" id="erro_senha">
+                            *Senha não preenchida
+                          </p>
+                          <div class="row">
+                              <div onclick="formValidation()" class="btn col-12 mb-3" style="display: block;" role="button" aria-disabled="true" id="btn">Logar</div> 
+                              <div class="col-12 mb-3 py-2" style="display: none; opacity: 0; color: #00e231; font-size: 10px; transition: ease-in-out 0.2s;" aria-disabled="true" id="bemVindo">:) Seja muito bem vindo!</div> 
+                          </div>
+                        </div>
+                        <div>
+                    </div>
+                    </div>
+                </div>
+            </article>
+    </html>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="scripts/script.js"></script>
+    <script>
+      // mostrar e esconder senha
+      function mostrarSenha() {
+        let senha = document.getElementById('senha');
+        if (senha.type === 'password') {
+          senha.type = 'text';
+          document.getElementById('visivel').style.display = 'block';
+          document.getElementById('invisivel').style.display = 'none';
+        } else {
+          senha.type = 'password';
+          document.getElementById('visivel').style.display = 'none';
+          document.getElementById('invisivel').style.display = 'block';
+        }
+      }
+    </script>
+      <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+</body>
